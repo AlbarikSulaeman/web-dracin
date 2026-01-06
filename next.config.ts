@@ -1,31 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  
-  // Essential for App Router
-  experimental: {
-    appDir: true,
-  },
-  
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'dramabox.sansekai.my.id',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.sansekai.my.id',
+        hostname: '**',
       },
     ],
-  },
-  
-  // Add this for better App Router support
-  compiler: {
-    // Remove console logs in production
-    removeConsole: process.env.NODE_ENV === 'production',
   },
 };
 

@@ -327,7 +327,7 @@ export default function DramaPage() {
             </div>
 
             {/* Video Player */}
-            <div className="relative bg-black rounded-xl overflow-hidden shadow-2xl aspect-video">
+            <div className=" bg-black rounded-lg">
               {videoLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-black/90 z-10">
                   <div className="text-center">
@@ -337,6 +337,15 @@ export default function DramaPage() {
                 </div>
               )}
               
+              {/* <video
+                key={getVideoUrl()}
+                className="w-full h-full"
+                controls
+                autoPlay
+              >
+                <source src={getVideoUrl() || ''} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
               <video
                 ref={videoRef}
                 key={getVideoUrl()}
